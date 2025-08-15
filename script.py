@@ -10,6 +10,11 @@ conn = pymysql.connect(
     database='erpboss'
 )
 
+
+
+
+
+
 df = pd.read_sql("SELECT * FROM stock", conn)
 print(df.head())  # Output will appear in GitHub Actions log
 
