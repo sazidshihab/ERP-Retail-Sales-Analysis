@@ -1,7 +1,7 @@
-name: Test EC2 Connection
+name: Test EC2 Connection  # <-- top-level mapping, not a list
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:       # allows manual trigger
 
 jobs:
   test-connection:
@@ -9,4 +9,5 @@ jobs:
     steps:
       - name: Check SSH port
         run: |
-          nc -zv 13.60.117.189 22 || echo "Cannot connect to SSH"
+          nc -zv EC2_PUBLIC_IP 22 || echo "Cannot connect to SSH"
+
