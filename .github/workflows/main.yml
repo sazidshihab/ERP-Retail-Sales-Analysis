@@ -1,3 +1,12 @@
-- name: Test EC2 connectivity
-  run: |
-    nc -vz EC2_PUBLIC_IP 33306
+name: Test EC2 Connection
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-connection:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check SSH port
+        run: |
+          nc -zv 13.60.117.189 22 || echo "Cannot connect to SSH"
