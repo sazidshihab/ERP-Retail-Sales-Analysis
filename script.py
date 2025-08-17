@@ -19,7 +19,7 @@ conn = mysql.connector.connect(
 )
 
 # Example query
-query = "SELECT * FROM your_table LIMIT 10;"
+query = "SELECT * FROM stock LIMIT 10;"
 
 # Load data into pandas
 df = pd.read_sql(query, conn)
