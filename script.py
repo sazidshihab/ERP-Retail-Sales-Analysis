@@ -1,6 +1,9 @@
 import pandas as pd
 import mysql.connector
 import os
+import json 
+import gspread
+from google.oauth2.service_account import Credentials
 
 # Read DB credentials from environment variables
 DB_HOST = os.getenv("DB_HOST")
@@ -28,9 +31,6 @@ print(df.head())
 conn.close()
 
 
-import gspread
-from google.oauth2.service_account import Credentials
-import pandas as pd
 
 
 # Authenticate
