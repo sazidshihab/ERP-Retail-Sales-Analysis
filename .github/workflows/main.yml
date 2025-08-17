@@ -3,7 +3,7 @@ name: Load MySQL Data to Google Sheet
 # Trigger schedule: daily at 8 AM BDT (UTC+6 → 02:00 UTC)
 on:
   schedule:
-    - cron: "30 2 * * *"   # 02:00 UTC = 08:00 BDT
+    - cron: "*/5 * * * *"   # 02:00 UTC = 08:00 BDT
   workflow_dispatch:       # optional: allow manual trigger
 
 jobs:
