@@ -1,4 +1,4 @@
-import pymysql
+import mysql.connector
 import pandas as pd
 import os
 import json 
@@ -7,7 +7,7 @@ from google.oauth2.service_account import Credentials
 
 
 
-conn = pymysql.connect(
+conn = mysql.connector.connect(
     host='10.0.0.1',   # VPN IP
     port=3306,
     user='sazid',
