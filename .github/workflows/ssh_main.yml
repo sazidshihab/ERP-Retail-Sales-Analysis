@@ -1,4 +1,4 @@
-name: Load MySQL Data to Google Sheet
+name: Load MySQL Data to Google Sheet_ssh
 
 # Trigger schedule: every 5 minutes (for testing)
 on:
@@ -45,4 +45,4 @@ jobs:
         DB_NAME: ${{ secrets.DB_NAME }}
         SERVICE_ACNT_CRED: ${{ secrets.SERVICE_ACNT_CRED }}   # Google service account JSON
       run: |
-        python script.py
+        python script_ssh.py
