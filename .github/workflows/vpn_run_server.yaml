@@ -38,7 +38,7 @@ jobs:
 
       - name: Run your script through VPN
         run: |
-          python3 script_job.py
+          python3 vpn_run_server.py
 
       - name: Stop WireGuard
         if: always()
