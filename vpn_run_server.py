@@ -1,5 +1,11 @@
 import pymysql
 import pandas as pd
+import os
+import json 
+import gspread
+from google.oauth2.service_account import Credentials
+
+
 
 conn = pymysql.connect(
     host='10.0.0.1',   # VPN IP
