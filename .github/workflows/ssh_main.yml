@@ -25,7 +25,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pandas mysql-connector-python gspread oauth2client google-auth paramiko
+        pip install pandas mysql-connector-python gspread oauth2client google-auth paramiko sshtunnel
 
     # Step 4: Set up SSH for EC2 connection
     - name: Configure SSH
