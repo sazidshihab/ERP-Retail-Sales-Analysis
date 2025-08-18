@@ -42,8 +42,12 @@ jobs:
           sudo wg
 
       - name: Run Python Script Through VPN
-        run: python3 vpn_run_server.py
+        env:
+          SERVICE_ACNT_CRED: ${{ secrets.SERVICE_ACNT_CRED }}
+        run: |
+          python3 vpn_run_server.py
 
       - name: Stop WireGuard
         if: always()
-        run: sudo wg-quick down ./wg0.conf
+        run: |
+          sudo wg-quick down ./wg0.conf
