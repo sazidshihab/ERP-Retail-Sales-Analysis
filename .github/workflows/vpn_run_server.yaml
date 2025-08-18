@@ -19,7 +19,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python3 -m pip install --upgrade pip
-          pip install pymysql pandas
+          pip install pymysql pandas gspread oauth2client google-auth
 
       - name: Configure WireGuard
         run: |
