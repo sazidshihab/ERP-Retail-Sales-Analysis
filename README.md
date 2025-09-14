@@ -1,3 +1,5 @@
+## 📁 Repository Structure
+
 📊 ERPBoss — Sales Analytics
 
 ERPBoss is a complete sales analytics pipeline that transforms ERP data into actionable KPIs and visual insights through Tableau.
